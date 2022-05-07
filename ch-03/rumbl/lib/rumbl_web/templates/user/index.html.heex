@@ -1,0 +1,44 @@
+<h1>Listing users</h1>
+
+<table>
+  <%= for user <- @users do %>
+    <tr>
+      <td><b><%= first_name(user) %></b> (<%= user.id %>)</td>
+      <td><%= link "View", to: Routes.user_path(@conn, :show, user.id) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%# Phoenix.HTML.Link.link("Home", to: "/")
+{:safe,
+ [
+   60,
+   "a",
+   [32, "href", 61, 34, "/", 34],
+   62,
+   "Home",
+   60,
+   47,
+   "a",
+   62
+ ]} %>
+
+<%# Phoenix.HTML.Link.link("Home", to: "/") |> Phoenix.HTML.safe_to_string()
+"<a href=\"/\">Home</a>" %>
+
+<%# user = Rumbl.Accounts.get_user("1") %>
+<%# %Rumbl.Accounts.User{
+  id: "1",
+  name: "José",
+  username: "josevalim"
+} %>
+
+<%# view = RumblWeb.UserView.render("user.html", user: user) %>
+<%# %Phoenix.LiveView.Rendered{
+  dynamic: #Function<2.103052451/1 in RumblWeb.User
+View."user.html"/1>,
+  fingerprint: 478385541910557643653782654035570960
+53,
+  root: false,
+  static: ["<strong>", "</strong> (", ")\n"]
+} %>
