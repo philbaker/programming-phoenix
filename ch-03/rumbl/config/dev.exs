@@ -4,7 +4,6 @@ import Config
 config :rumbl, Rumbl.Repo,
   username: "phoenix",
   password: "password",
-  password: "postgres",
   hostname: "localhost",
   database: "rumbl_dev",
   stacktrace: true,
