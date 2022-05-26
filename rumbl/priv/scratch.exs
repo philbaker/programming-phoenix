@@ -256,7 +256,7 @@ category = Repo.get_by(Category, name: "Drama")
 # %Rumbl.Multimedia.Category{
 #   __meta__: #Ecto.Schema.Metadata<:loaded, "categor
 # ies">,
-#   id: 9,
+#   id: ,
 #   inserted_at: ~N[2022-05-19 05:20:33],
 #   name: "Drama",
 #   updated_at: ~N[2022-05-19 05:20:33]
