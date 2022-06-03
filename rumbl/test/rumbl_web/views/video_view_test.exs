@@ -27,11 +27,10 @@ defmodule RumblWeb.VideoViewTest do
     categories = [%Rumbl.Multimedia.Category{id: 123, name: "cats"}]
 
     content =
-    render_to_string(RumblWeb.VideoView, "new.html",
-      conn: conn,
-      changeset: changeset,
-      categories: categories
-    )
+      render_to_string(RumblWeb.VideoView, "new.html",
+        conn: conn,
+        changeset: changeset,
+        categories: categories)
 
     assert String.contains?(content, "New Video")
   end
