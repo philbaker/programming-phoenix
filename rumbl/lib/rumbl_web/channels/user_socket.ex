@@ -7,4 +7,7 @@ defmodule RumblWeb.UserSocket do
     {:ok, socket}
   end
   def id(_socket), do: nil
+
+  ## Channels
+  channel "videos:*", RumblWeb.VideoChannel
 end

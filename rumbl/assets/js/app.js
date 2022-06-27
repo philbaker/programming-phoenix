@@ -52,12 +52,3 @@ import Video from "./video";
 import socket from "./socket"
 
 Video.init(socket, document.getElementById("video"));
-
-import Player from "./player";
-const video = document.getElementById("video");
-
-if (video) {
-  Player.init(video.id, video.getAttribute("data-player-id"), () => {
-    console.log("player ready!");
-  });
-}
